@@ -2,9 +2,9 @@ name: Thaddeus Daily Briefing
 
 on:
   schedule:
-    # 17:00 UTC = 1:00 PM EDT (summer). In winter (EST) this fires at 12:00 PM;
-    # change to '0 18 * * *' after the November clock change if you care.
-    - cron: '0 17 * * *'
+    # Weekdays only. 17:00 UTC = 1:00 PM EDT (summer). In winter (EST) this fires
+    # at 12:00 PM; change to '0 18 * * 1-5' after the November clock change if you care.
+    - cron: '0 17 * * 1-5'
   workflow_dispatch: {}
 
 permissions:

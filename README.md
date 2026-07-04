@@ -1,19 +1,22 @@
-# Thaddeus Daily Briefing Bot
+# Thaddeus Daily Briefing Bot (v2)
 
-A Slack bot named **Thaddeus** that posts your DevOps curriculum day — day number, module, single objective, Codecademy link — every day at 1 PM via a scheduled GitHub Actions workflow.
+A Slack bot named **Thaddeus** running a **60-day, 3-hours-per-day (1–4 PM, weekdays)** DevOps curriculum: Docker → Linux/Git → Kubernetes → Helm/Observability → CKA prep → CI/CD (Actions, Jenkins, Bitbucket) → Terraform → AWS SAA-C03 → capstone. Each day has a plan (Learn/Lab/Drill), curated links, and a **checkpoint answer that gates the next day**.
 
-This is also your first CI/CD artifact: a real scheduled pipeline you own, before you even hit Days 13–17 (the CI/CD module). Mention it in interviews.
+This repo is itself a CI/CD portfolio artifact: scheduled pipeline, PR validation, and an input-driven grading workflow.
 
 ## How it works
 
 ```
-GitHub Actions (cron, 17:00 UTC)
-  → reads state/day.txt        (which day you're on)
-  → looks up curriculum.json   (module, objective, link)
-  → POSTs to Slack webhook     (arrives as "Thaddeus", pings like a real DM)
-```
+WEEKDAYS 1 PM — Thaddeus Daily Briefing (cron '0 17 * * 1-5')
+  → reads state/day.txt          (which day you're on)
+  → looks up curriculum.json     (objective, plan, links, checkpoint)
+  → POSTs briefing to Slack      (links one per line + today's checkpoint)
 
-Day 22+ automatically switches to AWS cert-prep mode (per curriculum §5.5).
+WHEN YOU FINISH — Submit Answer (Actions → Run workflow, type your answer)
+  → pattern-checks it against the day's checkpoint (robot rule, no AI)
+  → PASS: commits day.txt +1, Slack "✅ Day N cleared, Day N+1 unlocked"
+  → FAIL: Slack "❌ not yet" + hint, day stays locked, run shows red
+```
 
 ## One-time setup (~30 min)
 
@@ -45,9 +48,10 @@ Day 22+ automatically switches to AWS cert-prep mode (per curriculum §5.5).
 
 ## Daily operation
 
-- **Advancing the day:** after you complete a session, bump the number in `state/day.txt` (github.com → open file → pencil icon → commit). The bot never auto-advances — miss a day, and tomorrow repeats it. That matches the curriculum rule: resume, never cram.
-- **Skipping/reordering:** set `day.txt` to any number.
+- **Advancing the day:** finish the work, then Actions → **Submit Answer** → Run workflow → type your checkpoint answer. Pass = auto-advance + Slack confirmation. The bot never advances on a calendar — miss a day, tomorrow repeats it. Resume, never cram.
+- **Manual override:** editing `state/day.txt` directly still works (skip, reorder, correct a mistake) — that's operational data, committed straight to `main`.
 - **Your permanent log** stays in `session-log.md` in the project folder (confidence scores, distractions, parked items). `day.txt` only drives the bot.
+- **Deep grading:** the robot rule proves you did the work; whether your *explanation* is interview-ready gets tested in the 1–4 PM session with Claude/Thaddeus.
 
 ## Branching & testing
 

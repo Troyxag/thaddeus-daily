@@ -1,0 +1,63 @@
+name: Submit Answer
+
+on:
+  workflow_dispatch:
+    inputs:
+      answer:
+        description: "Your answer to today's checkpoint"
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+concurrency:
+  group: day-advance
+  cancel-in-progress: false
+
+jobs:
+  grade:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Grade answer and advance on pass
+        env:
+          ANSWER: ${{ inputs.answer }}
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        run: |
+          set -euo pipefail
+          DAY=$(tr -d '[:space:]' < state/day.txt)
+
+          if [ "$DAY" -gt 60 ]; then
+            MSG="🎓 Program already complete (60/60). Nothing left to unlock."
+            jq -n --arg text "$MSG" '{text: $text}' | curl -sf -X POST -H 'Content-Type: application/json' -d @- "$SLACK_WEBHOOK_URL"
+            exit 0
+          fi
+
+          ROW=$(jq -c --argjson d "$DAY" '.[] | select(.day == $d)' curriculum.json)
+          PATTERN=$(echo "$ROW" | jq -r '.checkpoint.pattern')
+          HINT=$(echo "$ROW" | jq -r '.checkpoint.hint')
+
+          if printf '%s' "$ANSWER" | grep -Eiq "$PATTERN"; then
+            NEXT=$((DAY + 1))
+            echo "$NEXT" > state/day.txt
+            git config user.name "thaddeus-bot"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add state/day.txt
+            git commit -m "Day $DAY cleared — advance to Day $NEXT"
+            git push
+            if [ "$NEXT" -gt 60 ]; then
+              MSG="✅ *Day $DAY cleared — PROGRAM COMPLETE, 60/60.* Go update the resume."
+            else
+              NEXTOBJ=$(jq -r --argjson d "$NEXT" '.[] | select(.day == $d) | .objective' curriculum.json)
+              MSG=$(printf '✅ *Day %s cleared.* Day %s unlocked:\n%s' "$DAY" "$NEXT" "$NEXTOBJ")
+            fi
+            jq -n --arg text "$MSG" '{text: $text}' | curl -sf -X POST -H 'Content-Type: application/json' -d @- "$SLACK_WEBHOOK_URL"
+            echo "PASS — advanced to day $NEXT"
+          else
+            MSG=$(printf '❌ *Day %s checkpoint: not yet.*\nHint: %s\nRun Submit Answer again when ready.' "$DAY" "$HINT")
+            jq -n --arg text "$MSG" '{text: $text}' | curl -sf -X POST -H 'Content-Type: application/json' -d @- "$SLACK_WEBHOOK_URL"
+            echo "FAIL — answer did not match checkpoint for day $DAY" >&2
+            exit 1
+          fi

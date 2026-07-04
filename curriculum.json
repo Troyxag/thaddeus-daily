@@ -1,99 +1,435 @@
 [
-  {"day": 1, "module": "Docker", "objective": "Explain the image/container/Dockerfile mental model; write a first Dockerfile for a trivial app", "resources": [
-    {"label": "Intro to Docker (Codecademy)", "url": "https://www.codecademy.com/learn/ext-courses/working-with-containers-introduction-to-docker"},
-    {"label": "Docker Get Started", "url": "https://docs.docker.com/get-started/"},
-    {"label": "Dockerfile reference", "url": "https://docs.docker.com/reference/dockerfile/"}
-  ]},
-  {"day": 2, "module": "Docker", "objective": "Multi-stage builds — shrink a bloated image and explain why each stage exists", "resources": [
-    {"label": "Intro to Docker (Codecademy)", "url": "https://www.codecademy.com/learn/ext-courses/working-with-containers-introduction-to-docker"},
-    {"label": "Multi-stage builds", "url": "https://docs.docker.com/build/building/multi-stage/"},
-    {"label": "Build best practices", "url": "https://docs.docker.com/build/building/best-practices/"}
-  ]},
-  {"day": 3, "module": "Docker", "objective": "Docker Compose — wire up a two-service local setup", "resources": [
-    {"label": "Mastering Docker Compose (Codecademy)", "url": "https://www.codecademy.com/article/mastering-docker-compose"},
-    {"label": "Compose quickstart", "url": "https://docs.docker.com/compose/gettingstarted/"}
-  ]},
-  {"day": 4, "module": "Docker", "objective": "Container networking and volumes — persist data across a container restart", "resources": [
-    {"label": "Docker Networking (Codecademy)", "url": "https://www.codecademy.com/article/docker-networking"},
-    {"label": "Networking docs", "url": "https://docs.docker.com/engine/network/"},
-    {"label": "Volumes docs", "url": "https://docs.docker.com/engine/storage/volumes/"}
-  ]},
-  {"day": 5, "module": "Docker", "objective": "Milestone: containerize job_digest.py with a clean, justified Dockerfile", "resources": [
-    {"label": "Build best practices", "url": "https://docs.docker.com/build/building/best-practices/"},
-    {"label": "Dockerfile reference", "url": "https://docs.docker.com/reference/dockerfile/"}
-  ]},
-  {"day": 6, "module": "SQL drill 1", "objective": "Joins — inner/left/right/full, cold, timed", "resources": [
-    {"label": "Analyze Data with SQL (Codecademy)", "url": "https://www.codecademy.com/learn/paths/analyze-data-with-sql"},
-    {"label": "SQLBolt joins", "url": "https://sqlbolt.com/lesson/select_queries_with_joins"},
-    {"label": "PGExercises joins", "url": "https://pgexercises.com/questions/joins/"}
-  ]},
-  {"day": 7, "module": "Kubernetes", "objective": "Write a Deployment + Service manifest from scratch, no copy-paste", "resources": [
-    {"label": "Intro to Kubernetes (Codecademy)", "url": "https://www.codecademy.com/learn/ext-courses/working-with-containers-introduction-to-kubernetes"},
-    {"label": "Deployments", "url": "https://kubernetes.io/docs/concepts/workloads/controllers/deployment/"},
-    {"label": "Killercoda K8s playground", "url": "https://killercoda.com/playgrounds/scenario/kubernetes"}
-  ]},
-  {"day": 8, "module": "Kubernetes", "objective": "ConfigMaps and Secrets — inject config without hardcoding", "resources": [
-    {"label": "Intro to Kubernetes (Codecademy)", "url": "https://www.codecademy.com/learn/ext-courses/working-with-containers-introduction-to-kubernetes"},
-    {"label": "ConfigMaps", "url": "https://kubernetes.io/docs/concepts/configuration/configmap/"},
-    {"label": "Secrets", "url": "https://kubernetes.io/docs/concepts/configuration/secret/"}
-  ]},
-  {"day": 9, "module": "Kubernetes", "objective": "Services and Ingress — expose an app correctly", "resources": [
-    {"label": "Intro to Kubernetes (Codecademy)", "url": "https://www.codecademy.com/learn/ext-courses/working-with-containers-introduction-to-kubernetes"},
-    {"label": "Services", "url": "https://kubernetes.io/docs/concepts/services-networking/service/"},
-    {"label": "Ingress", "url": "https://kubernetes.io/docs/concepts/services-networking/ingress/"}
-  ]},
-  {"day": 10, "module": "Kubernetes", "objective": "RBAC and NetworkPolicies — restrict access, then break and fix one", "resources": [
-    {"label": "CKA 2024 Cert Prep (Codecademy)", "url": "https://www.codecademy.com/learn/ext-paths/certified-kubernetes-administrator-cka-2024"},
-    {"label": "RBAC", "url": "https://kubernetes.io/docs/reference/access-authn-authz/rbac/"},
-    {"label": "NetworkPolicies", "url": "https://kubernetes.io/docs/concepts/services-networking/network-policies/"}
-  ]},
-  {"day": 11, "module": "Kubernetes", "objective": "Milestone: deploy the Module 2 app to a personal cluster with monitoring wired up", "resources": [
-    {"label": "kind quickstart", "url": "https://kind.sigs.k8s.io/docs/user/quick-start/"},
-    {"label": "CKA 2024 Cert Prep (Codecademy)", "url": "https://www.codecademy.com/learn/ext-paths/certified-kubernetes-administrator-cka-2024"}
-  ]},
-  {"day": 12, "module": "SQL drill 2", "objective": "Subqueries and CTEs, cold, timed", "resources": [
-    {"label": "Analyze Data with SQL (Codecademy)", "url": "https://www.codecademy.com/learn/paths/analyze-data-with-sql"},
-    {"label": "Mode SQL tutorial", "url": "https://mode.com/sql-tutorial"},
-    {"label": "PGExercises", "url": "https://pgexercises.com/"}
-  ]},
-  {"day": 13, "module": "CI/CD", "objective": "Pipeline anatomy — stages, triggers, artifacts, explained cold", "resources": [
-    {"label": "Introduction to DevOps (Codecademy)", "url": "https://www.codecademy.com/learn/introduction-to-dev-ops"},
-    {"label": "Continuous Integration (Codecademy)", "url": "https://www.codecademy.com/article/continuous-integration"},
-    {"label": "GitHub Actions docs", "url": "https://docs.github.com/en/actions"}
-  ]},
-  {"day": 14, "module": "CI/CD", "objective": "First GitHub Actions workflow — build and test on push", "resources": [
-    {"label": "Actions quickstart", "url": "https://docs.github.com/en/actions/quickstart"},
-    {"label": "Your own thaddeus-daily pipeline", "url": "https://github.com/Troyxag/thaddeus-daily/blob/main/.github/workflows/thaddeus-daily.yml"}
-  ]},
-  {"day": 15, "module": "CI/CD", "objective": "Add image build + registry push to the pipeline", "resources": [
-    {"label": "Publishing Docker images", "url": "https://docs.github.com/en/actions/publishing-packages/publishing-docker-images"},
-    {"label": "docker/build-push-action", "url": "https://github.com/docker/build-push-action"}
-  ]},
-  {"day": 16, "module": "CI/CD", "objective": "Deployment strategies — blue/green vs. canary, and where secrets live in a pipeline", "resources": [
-    {"label": "Continuous Delivery and Deployment (Codecademy)", "url": "https://www.codecademy.com/article/continuous-delivery-and-deployment"},
-    {"label": "Blue-green (Fowler)", "url": "https://martinfowler.com/bliki/BlueGreenDeployment.html"},
-    {"label": "Actions secrets", "url": "https://docs.github.com/en/actions/security-guides/using-secrets-in-github-actions"}
-  ]},
-  {"day": 17, "module": "CI/CD", "objective": "Milestone: full pipeline for the Dockerized job_digest.py — build, test, push, deploy", "resources": [
-    {"label": "GitHub Actions docs", "url": "https://docs.github.com/en/actions"},
-    {"label": "docker/build-push-action", "url": "https://github.com/docker/build-push-action"}
-  ]},
-  {"day": 18, "module": "SQL drill 3", "objective": "Aggregation — GROUP BY / HAVING, cold, timed", "resources": [
-    {"label": "Analyze Data with SQL (Codecademy)", "url": "https://www.codecademy.com/learn/paths/analyze-data-with-sql"},
-    {"label": "SQLBolt aggregates", "url": "https://sqlbolt.com/lesson/select_queries_with_aggregates"},
-    {"label": "PGExercises aggregates", "url": "https://pgexercises.com/questions/aggregates/"}
-  ]},
-  {"day": 19, "module": "SQL drill 4", "objective": "Window functions, cold, timed", "resources": [
-    {"label": "Analyze Data with SQL (Codecademy)", "url": "https://www.codecademy.com/learn/paths/analyze-data-with-sql"},
-    {"label": "Mode window functions", "url": "https://mode.com/sql-tutorial/sql-window-functions"}
-  ]},
-  {"day": 20, "module": "SQL drill 5", "objective": "Indexing intuition — why a query is slow, not just what it returns", "resources": [
-    {"label": "Analyze Data with SQL (Codecademy)", "url": "https://www.codecademy.com/learn/paths/analyze-data-with-sql"},
-    {"label": "Use The Index, Luke", "url": "https://use-the-index-luke.com/"}
-  ]},
-  {"day": 21, "module": "SQL drill 6", "objective": "Milestone: timed mixed set against a mock incident/ticket dataset", "resources": [
-    {"label": "Analyze Data with SQL (Codecademy)", "url": "https://www.codecademy.com/learn/paths/analyze-data-with-sql"},
-    {"label": "PGExercises", "url": "https://pgexercises.com/"},
-    {"label": "SQLBolt", "url": "https://sqlbolt.com/"}
-  ]}
+  {"day": 1, "week": 1, "module": "Docker", "objective": "Own the image/container/Dockerfile mental model; write and build your first Dockerfile",
+   "plan": ["Learn 60m: Codecademy Intro to Docker (first lessons) + Docker Get Started overview", "Lab 75m: write a Dockerfile for a tiny Python script; docker build; docker run; break it and rebuild", "Drill 45m: explain image vs container vs Dockerfile cold; submit checkpoint; log"],
+   "resources": [
+     {"label": "Intro to Docker (Codecademy)", "url": "https://www.codecademy.com/learn/ext-courses/working-with-containers-introduction-to-docker"},
+     {"label": "Docker Get Started", "url": "https://docs.docker.com/get-started/"},
+     {"label": "Dockerfile reference", "url": "https://docs.docker.com/reference/dockerfile/"}],
+   "checkpoint": {"prompt": "Paste the exact instruction line from your Dockerfile that sets the base image.", "pattern": "^FROM[[:space:]]+[a-zA-Z0-9]", "hint": "It is the first instruction in almost every Dockerfile."}},
+
+  {"day": 2, "week": 1, "module": "Docker", "objective": "Layers and caching — shrink a bloated image with a multi-stage build",
+   "plan": ["Learn 60m: multi-stage builds + best practices docs", "Lab 75m: take Day 1 image, measure size, rebuild multi-stage, measure again", "Drill 45m: justify every stage out loud; checkpoint; log"],
+   "resources": [
+     {"label": "Multi-stage builds", "url": "https://docs.docker.com/build/building/multi-stage/"},
+     {"label": "Build best practices", "url": "https://docs.docker.com/build/building/best-practices/"},
+     {"label": "Intro to Docker (Codecademy)", "url": "https://www.codecademy.com/learn/ext-courses/working-with-containers-introduction-to-docker"}],
+   "checkpoint": {"prompt": "Which Dockerfile keyword names a build stage (used together with FROM)?", "pattern": "\\bAS\\b", "hint": "FROM golang:1.22 ___ builder"}},
+
+  {"day": 3, "week": 1, "module": "Docker", "objective": "Docker Compose — wire up a two-service local stack",
+   "plan": ["Learn 60m: Codecademy Compose article + Compose quickstart", "Lab 75m: app + Redis (or Postgres) via compose.yaml; up, down, logs, exec", "Drill 45m: explain what Compose adds over plain docker run; checkpoint; log"],
+   "resources": [
+     {"label": "Mastering Docker Compose (Codecademy)", "url": "https://www.codecademy.com/article/mastering-docker-compose"},
+     {"label": "Compose quickstart", "url": "https://docs.docker.com/compose/gettingstarted/"}],
+   "checkpoint": {"prompt": "What is the top-level key in compose.yaml under which every container is defined?", "pattern": "services", "hint": "Plural noun, first key you write."}},
+
+  {"day": 4, "week": 1, "module": "Docker", "objective": "Networking and volumes — persist data across container restarts",
+   "plan": ["Learn 60m: Codecademy networking article + volumes docs", "Lab 75m: named volume for your DB service; kill and restart, prove data survived; inspect networks", "Drill 45m: bridge vs host network cold; checkpoint; log"],
+   "resources": [
+     {"label": "Docker Networking (Codecademy)", "url": "https://www.codecademy.com/article/docker-networking"},
+     {"label": "Networking docs", "url": "https://docs.docker.com/engine/network/"},
+     {"label": "Volumes docs", "url": "https://docs.docker.com/engine/storage/volumes/"}],
+   "checkpoint": {"prompt": "What command lists all Docker networks on your machine?", "pattern": "docker[[:space:]]+network[[:space:]]+ls", "hint": "docker <noun> <verb you use for files too>"}},
+
+  {"day": 5, "week": 1, "module": "Docker", "objective": "MILESTONE: containerize job_digest.py with a justified, multi-stage Dockerfile",
+   "plan": ["Learn 30m: review best practices checklist", "Lab 105m: full containerization of job_digest.py; .dockerignore; size-optimized; runs clean", "Drill 45m: line-by-line justification rehearsal; checkpoint; log"],
+   "resources": [
+     {"label": "Build best practices", "url": "https://docs.docker.com/build/building/best-practices/"},
+     {"label": "Dockerfile reference", "url": "https://docs.docker.com/reference/dockerfile/"}],
+   "checkpoint": {"prompt": "Paste the size line for your final image from `docker image ls` (must show MB or GB).", "pattern": "(MB|GB)", "hint": "Last column of docker image ls."}},
+
+  {"day": 6, "week": 2, "module": "Linux + Shell", "objective": "Linux essentials for DevOps — filesystem, permissions, processes, pipes",
+   "plan": ["Learn 60m: KodeKloud free 100 Days of DevOps (Linux tasks) or Linux Journey", "Lab 75m: 20-command workout in your terminal: find, grep, ps, chmod, pipes, redirects", "Drill 45m: permissions math (755, 644) cold; checkpoint; log"],
+   "resources": [
+     {"label": "100 Days of DevOps (KodeKloud, free)", "url": "https://kodekloud.com/100-days-of-devops"},
+     {"label": "Linux Journey", "url": "https://linuxjourney.com/"},
+     {"label": "TechWorld with Nana (video)", "url": "https://www.youtube.com/@TechWorldwithNana"}],
+   "checkpoint": {"prompt": "What command shows the disk usage of the current directory, summarized and human-readable?", "pattern": "du[[:space:]]+-s?h", "hint": "Two letters, two flags: -s and -h."}},
+
+  {"day": 7, "week": 2, "module": "Git", "objective": "Git beyond add/commit/push — branching, rebase, conflict resolution",
+   "plan": ["Learn 60m: Learn Git Branching (interactive) + rebase vs merge", "Lab 75m: create a deliberate merge conflict in a scratch repo and resolve it both ways", "Drill 45m: explain rebase vs merge tradeoffs cold; checkpoint; log"],
+   "resources": [
+     {"label": "Learn Git Branching (interactive)", "url": "https://learngitbranching.js.org/"},
+     {"label": "Git book: Branching", "url": "https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging"},
+     {"label": "Codecademy: Learn Git", "url": "https://www.codecademy.com/learn/learn-git"}],
+   "checkpoint": {"prompt": "What command replays your feature-branch commits on top of main?", "pattern": "git[[:space:]]+rebase", "hint": "Not merge — the other one."}},
+
+  {"day": 8, "week": 2, "module": "Docker", "objective": "Registries and image hygiene — push to Docker Hub as troyxag, scan for vulnerabilities",
+   "plan": ["Learn 60m: registry concepts + image tagging + Docker Scout/trivy basics", "Lab 75m: tag and push job-digest to Docker Hub; scan it; read the CVE report", "Drill 45m: what is a digest vs a tag, cold; checkpoint; log"],
+   "resources": [
+     {"label": "Docker Hub quickstart", "url": "https://docs.docker.com/docker-hub/"},
+     {"label": "Trivy scanner", "url": "https://github.com/aquasecurity/trivy"},
+     {"label": "DevSecOps and Containers (Codecademy)", "url": "https://www.codecademy.com/learn/ext-courses/devsecops-and-containers"}],
+   "checkpoint": {"prompt": "Paste the full image reference you pushed (username/repo:tag).", "pattern": "troyxag/[a-z0-9._-]+:[a-zA-Z0-9._-]+", "hint": "Starts with troyxag/ and ends with :sometag."}},
+
+  {"day": 9, "week": 2, "module": "SQL", "objective": "SQL drill 1: joins — inner/left/right/full, cold and timed",
+   "plan": ["Learn 45m: Codecademy SQL path joins section", "Lab 90m: SQLBolt + PGExercises joins sets, timed, no hints on first pass", "Drill 45m: draw the four join Venn diagrams from memory; checkpoint; log"],
+   "resources": [
+     {"label": "Analyze Data with SQL (Codecademy)", "url": "https://www.codecademy.com/learn/paths/analyze-data-with-sql"},
+     {"label": "SQLBolt joins", "url": "https://sqlbolt.com/lesson/select_queries_with_joins"},
+     {"label": "PGExercises joins", "url": "https://pgexercises.com/questions/joins/"}],
+   "checkpoint": {"prompt": "Which JOIN returns every row from the left table plus matching rows from the right?", "pattern": "left", "hint": "Directional."}},
+
+  {"day": 10, "week": 2, "module": "Glue milestone", "objective": "MILESTONE: shell script + cron + container — automate something real end to end",
+   "plan": ["Learn 30m: cron syntax + shell script hygiene (set -euo pipefail)", "Lab 105m: write a script that runs your job-digest container and logs output; schedule it with cron", "Drill 45m: read your own thaddeus-daily cron line and explain every field; checkpoint; log"],
+   "resources": [
+     {"label": "Shell scripting (100 Days, free)", "url": "https://kodekloud.com/100-days-of-devops"},
+     {"label": "crontab.guru", "url": "https://crontab.guru/"}],
+   "checkpoint": {"prompt": "Write the cron expression for 8:00 AM on weekdays only.", "pattern": "0[[:space:]]+8[[:space:]]+\\*[[:space:]]+\\*[[:space:]]+1-5", "hint": "minute hour dom month dow — weekdays are 1-5."}},
+
+  {"day": 11, "week": 3, "module": "Kubernetes", "objective": "Architecture and Pods — stand up a local kind cluster and run your image on it",
+   "plan": ["Learn 60m: Codecademy Intro to K8s (architecture) + kind quickstart", "Lab 75m: kind create cluster; kubectl run your job-digest image; inspect with describe/logs", "Drill 45m: name every control-plane component and its job, cold; checkpoint; log"],
+   "resources": [
+     {"label": "Intro to Kubernetes (Codecademy)", "url": "https://www.codecademy.com/learn/ext-courses/working-with-containers-introduction-to-kubernetes"},
+     {"label": "kind quickstart", "url": "https://kind.sigs.k8s.io/docs/user/quick-start/"},
+     {"label": "K8s components", "url": "https://kubernetes.io/docs/concepts/overview/components/"}],
+   "checkpoint": {"prompt": "What command creates a local cluster with kind?", "pattern": "kind[[:space:]]+create[[:space:]]+cluster", "hint": "Three words."}},
+
+  {"day": 12, "week": 3, "module": "Kubernetes", "objective": "Deployments and ReplicaSets — write a Deployment manifest from scratch, no copy-paste",
+   "plan": ["Learn 60m: Deployments concepts doc", "Lab 75m: hand-write deployment.yaml for job-digest; apply; scale; roll out a new tag; roll back", "Drill 45m: what happens between kubectl apply and a running pod, cold; checkpoint; log"],
+   "resources": [
+     {"label": "Deployments", "url": "https://kubernetes.io/docs/concepts/workloads/controllers/deployment/"},
+     {"label": "Killercoda K8s playground", "url": "https://killercoda.com/playgrounds/scenario/kubernetes"}],
+   "checkpoint": {"prompt": "What kubectl command watches the progress of a rollout for deployment/web?", "pattern": "rollout[[:space:]]+status", "hint": "kubectl ______ ______ deployment/web"}},
+
+  {"day": 13, "week": 3, "module": "Kubernetes", "objective": "Services and Ingress — expose the app correctly, understand the three Service types",
+   "plan": ["Learn 60m: Services + Ingress concept docs", "Lab 75m: ClusterIP then NodePort for your app on kind; install ingress-nginx and route a host", "Drill 45m: trace a request from browser to pod, cold; checkpoint; log"],
+   "resources": [
+     {"label": "Services", "url": "https://kubernetes.io/docs/concepts/services-networking/service/"},
+     {"label": "Ingress", "url": "https://kubernetes.io/docs/concepts/services-networking/ingress/"}],
+   "checkpoint": {"prompt": "Which Service type opens the same port on every node in the cluster?", "pattern": "nodeport", "hint": "The name says exactly what it does."}},
+
+  {"day": 14, "week": 3, "module": "Kubernetes", "objective": "ConfigMaps and Secrets — inject configuration without hardcoding",
+   "plan": ["Learn 60m: ConfigMap + Secret concept docs", "Lab 75m: move your app's env config into a ConfigMap and a Secret; mount both ways (env + volume)", "Drill 45m: why Secrets are only base64, and what that implies, cold; checkpoint; log"],
+   "resources": [
+     {"label": "ConfigMaps", "url": "https://kubernetes.io/docs/concepts/configuration/configmap/"},
+     {"label": "Secrets", "url": "https://kubernetes.io/docs/concepts/configuration/secret/"}],
+   "checkpoint": {"prompt": "What command creates a ConfigMap named app-config from a literal KEY=VALUE?", "pattern": "create[[:space:]]+configmap", "hint": "kubectl ______ ________ app-config --from-literal=KEY=VALUE"}},
+
+  {"day": 15, "week": 3, "module": "Kubernetes", "objective": "MILESTONE: full app (app + datastore) deployed on kind with manifests you authored",
+   "plan": ["Learn 30m: review the week's manifests", "Lab 105m: deploy the Compose stack from Day 3 as K8s manifests — Deployments, Services, ConfigMap, volume", "Drill 45m: walk the whole architecture out loud; checkpoint; log"],
+   "resources": [
+     {"label": "kubectl cheat sheet", "url": "https://kubernetes.io/docs/reference/kubectl/quick-reference/"},
+     {"label": "Killercoda K8s playground", "url": "https://killercoda.com/playgrounds/scenario/kubernetes"}],
+   "checkpoint": {"prompt": "Paste one line of `kubectl get deploy` output showing your READY count (e.g. 2/2).", "pattern": "[0-9]+/[0-9]+", "hint": "The READY column."}},
+
+  {"day": 16, "week": 4, "module": "Kubernetes", "objective": "RBAC — who can do what; create a Role and bind it",
+   "plan": ["Learn 60m: RBAC reference doc", "Lab 75m: create a ServiceAccount, a Role (get/list pods only), a RoleBinding; prove denial with kubectl auth can-i", "Drill 45m: Role vs ClusterRole cold; checkpoint; log"],
+   "resources": [
+     {"label": "RBAC", "url": "https://kubernetes.io/docs/reference/access-authn-authz/rbac/"},
+     {"label": "CKA 2024 Cert Prep (Codecademy)", "url": "https://www.codecademy.com/learn/ext-paths/certified-kubernetes-administrator-cka-2024"}],
+   "checkpoint": {"prompt": "Which object connects a Role to a user or ServiceAccount within a namespace?", "pattern": "rolebinding", "hint": "Two words, one object."}},
+
+  {"day": 17, "week": 4, "module": "Kubernetes", "objective": "NetworkPolicies — restrict traffic, then break and fix one live",
+   "plan": ["Learn 60m: NetworkPolicy concept doc", "Lab 75m: default-deny policy in a namespace, then allow only app->db; break it; diagnose; fix", "Drill 45m: what happens with no NetworkPolicy at all, cold; checkpoint; log"],
+   "resources": [
+     {"label": "NetworkPolicies", "url": "https://kubernetes.io/docs/concepts/services-networking/network-policies/"},
+     {"label": "Killercoda K8s playground", "url": "https://killercoda.com/playgrounds/scenario/kubernetes"}],
+   "checkpoint": {"prompt": "Inside a NetworkPolicy spec, which field selects the pods the policy applies to?", "pattern": "podselector", "hint": "camelCase, two words."}},
+
+  {"day": 18, "week": 4, "module": "Kubernetes", "objective": "Resource requests/limits and HPA — make the scheduler's job explicit",
+   "plan": ["Learn 60m: resource management + HPA docs", "Lab 75m: add requests/limits to your app; install metrics-server on kind; autoscale and load-test it", "Drill 45m: what OOMKilled means and who did it, cold; checkpoint; log"],
+   "resources": [
+     {"label": "Resource management", "url": "https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/"},
+     {"label": "HorizontalPodAutoscaler", "url": "https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/"}],
+   "checkpoint": {"prompt": "What kubectl command autoscales deployment web between 2 and 5 replicas at 70% CPU?", "pattern": "autoscale", "hint": "kubectl _________ deployment web --min=2 --max=5 --cpu-percent=70"}},
+
+  {"day": 19, "week": 4, "module": "Kubernetes", "objective": "StatefulSets and storage — PVs, PVCs, StorageClasses",
+   "plan": ["Learn 60m: storage concepts + StatefulSet docs", "Lab 75m: convert your datastore to a StatefulSet with a PVC; delete the pod, prove data survives", "Drill 45m: PV vs PVC vs StorageClass in one breath, cold; checkpoint; log"],
+   "resources": [
+     {"label": "Persistent Volumes", "url": "https://kubernetes.io/docs/concepts/storage/persistent-volumes/"},
+     {"label": "StatefulSets", "url": "https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/"}],
+   "checkpoint": {"prompt": "Which object does a pod use to request persistent storage?", "pattern": "pvc|persistentvolumeclaim", "hint": "Three-letter abbreviation is fine."}},
+
+  {"day": 20, "week": 4, "module": "K8s + SQL", "objective": "MILESTONE: break-and-fix gauntlet + SQL drill 2 (subqueries and CTEs)",
+   "plan": ["Lab 90m: Killercoda troubleshooting scenarios — Pending pods, CrashLoopBackOff, bad Services — diagnose from evidence", "Learn/Lab 60m: SQL subqueries + CTEs on PGExercises, timed", "Drill 30m: your triage method as a spoken runbook; checkpoint; log"],
+   "resources": [
+     {"label": "Killercoda K8s playground", "url": "https://killercoda.com/playgrounds/scenario/kubernetes"},
+     {"label": "Mode SQL: subqueries", "url": "https://mode.com/sql-tutorial/sql-sub-queries"},
+     {"label": "Debug pods", "url": "https://kubernetes.io/docs/tasks/debug/debug-application/debug-pods/"}],
+   "checkpoint": {"prompt": "A pod is stuck Pending with an 'unschedulable' event. What kubectl command shows you the events explaining why?", "pattern": "describe", "hint": "kubectl ________ pod <name>"}},
+
+  {"day": 21, "week": 5, "module": "Helm", "objective": "Helm as consumer — repos, install, upgrade, rollback",
+   "plan": ["Learn 60m: Helm quickstart + chart anatomy", "Lab 75m: helm install something real (e.g. bitnami/redis) on kind; upgrade it; roll it back; read what it templated", "Drill 45m: what Helm adds over kubectl apply, cold (you RAN Helm-deployed Grafana at Blockgraph — now explain it); checkpoint; log"],
+   "resources": [
+     {"label": "Helm quickstart", "url": "https://helm.sh/docs/intro/quickstart/"},
+     {"label": "Helm charts guide", "url": "https://helm.sh/docs/topics/charts/"}],
+   "checkpoint": {"prompt": "What command adds a chart repository named bitnami?", "pattern": "helm[[:space:]]+repo[[:space:]]+add", "hint": "helm ____ ___ bitnami <url>"}},
+
+  {"day": 22, "week": 5, "module": "Helm", "objective": "Helm as author — write a chart for your own app",
+   "plan": ["Learn 45m: templates, values, helpers", "Lab 90m: helm create, then adapt it to deploy your job-digest app; install from your chart", "Drill 45m: values.yaml vs templates split, cold; checkpoint; log"],
+   "resources": [
+     {"label": "Chart template guide", "url": "https://helm.sh/docs/chart_template_guide/getting_started/"},
+     {"label": "Helm best practices", "url": "https://helm.sh/docs/chart_best_practices/conventions/"}],
+   "checkpoint": {"prompt": "Which file in a chart holds the default configuration users override?", "pattern": "values\\.ya?ml", "hint": "It is the file you edit most."}},
+
+  {"day": 23, "week": 5, "module": "Observability", "objective": "Prometheus on Kubernetes — deploy the monitoring stack you used to consume",
+   "plan": ["Learn 60m: Prometheus architecture + kube-prometheus-stack chart README", "Lab 75m: helm install kube-prometheus-stack on kind; find your app's metrics; write 3 PromQL queries", "Drill 45m: scrape model vs push, cold; checkpoint; log"],
+   "resources": [
+     {"label": "Prometheus overview", "url": "https://prometheus.io/docs/introduction/overview/"},
+     {"label": "kube-prometheus-stack chart", "url": "https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack"}],
+   "checkpoint": {"prompt": "What is the name of the community Helm chart that installs the full Prometheus + Grafana + Alertmanager stack?", "pattern": "kube-prometheus-stack", "hint": "Three words, hyphenated."}},
+
+  {"day": 24, "week": 5, "module": "Observability", "objective": "Grafana dashboards and alert routing — build what you used to read",
+   "plan": ["Learn 45m: PromQL basics (rate, sum by) + Alertmanager routing", "Lab 90m: build a dashboard for your app; create one alert rule; route it (webhook to your Slack!)", "Drill 45m: alert fatigue — what makes a good alert, from your on-call experience; checkpoint; log"],
+   "resources": [
+     {"label": "PromQL basics", "url": "https://prometheus.io/docs/prometheus/latest/querying/basics/"},
+     {"label": "Alertmanager", "url": "https://prometheus.io/docs/alerting/latest/alertmanager/"},
+     {"label": "Grafana fundamentals", "url": "https://grafana.com/tutorials/grafana-fundamentals/"}],
+   "checkpoint": {"prompt": "Which PromQL function gives the per-second rate of increase of a counter over a window?", "pattern": "rate", "hint": "rate(http_requests_total[5m])"}},
+
+  {"day": 25, "week": 5, "module": "Helm + Obs", "objective": "MILESTONE: your app, Helm-deployed, monitored, alerting — the builder-side version of your Blockgraph story",
+   "plan": ["Lab 135m: end-to-end: helm install your chart, ServiceMonitor scraping it, dashboard live, alert firing on kill", "Drill 45m: rehearse this as an interview story next to the log-collection automation; checkpoint; log"],
+   "resources": [
+     {"label": "ServiceMonitor docs", "url": "https://prometheus-operator.dev/docs/getting-started/design/"},
+     {"label": "Helm quickstart", "url": "https://helm.sh/docs/intro/quickstart/"}],
+   "checkpoint": {"prompt": "Paste one PromQL query from your new dashboard.", "pattern": "rate|sum|avg|count|_total|\\{", "hint": "Any real query — it will contain a function or a selector."}},
+
+  {"day": 26, "week": 6, "module": "CKA prep", "objective": "Cluster administration — etcd backup/restore, upgrades, node maintenance",
+   "plan": ["Learn 60m: Codecademy CKA path (cluster admin) ", "Lab 75m: etcdctl snapshot save/restore on a killercoda scenario; drain/cordon a node", "Drill 45m: upgrade order of operations cold; checkpoint; log"],
+   "resources": [
+     {"label": "CKA 2024 Cert Prep (Codecademy)", "url": "https://www.codecademy.com/learn/ext-paths/certified-kubernetes-administrator-cka-2024"},
+     {"label": "Killercoda CKA scenarios", "url": "https://killercoda.com/killer-shell-cka"},
+     {"label": "etcd backup docs", "url": "https://kubernetes.io/docs/tasks/administer-cluster/configure-upgrade-etcd/"}],
+   "checkpoint": {"prompt": "What etcdctl command saves a snapshot of etcd?", "pattern": "snapshot[[:space:]]+save", "hint": "etcdctl ________ ____ /backup/etcd.db"}},
+
+  {"day": 27, "week": 6, "module": "CKA prep", "objective": "Scheduling — taints, tolerations, affinity, static pods",
+   "plan": ["Learn 60m: scheduling docs + CKA path section", "Lab 75m: taint a node, watch pods avoid it, tolerate it; nodeAffinity exercise", "Drill 45m: taint effects cold; checkpoint; log"],
+   "resources": [
+     {"label": "Taints and tolerations", "url": "https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/"},
+     {"label": "Killercoda CKA scenarios", "url": "https://killercoda.com/killer-shell-cka"}],
+   "checkpoint": {"prompt": "Which taint effect evicts pods that are already running on the node?", "pattern": "noexecute", "hint": "The harshest of the three effects."}},
+
+  {"day": 28, "week": 6, "module": "CKA prep", "objective": "Cluster networking and DNS — how names resolve inside the cluster",
+   "plan": ["Learn 60m: DNS for Services and Pods doc", "Lab 75m: nslookup from a debug pod; break CoreDNS and watch what fails; fix it", "Drill 45m: full FQDN pattern cold; checkpoint; log"],
+   "resources": [
+     {"label": "DNS for Services and Pods", "url": "https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/"},
+     {"label": "Debug DNS", "url": "https://kubernetes.io/docs/tasks/administer-cluster/dns-debugging-resolution/"}],
+   "checkpoint": {"prompt": "What is the in-cluster DNS name for Service 'web' in namespace 'shop' (short cluster.local form is fine)?", "pattern": "web\\.shop", "hint": "service.namespace.svc.cluster.local"}},
+
+  {"day": 29, "week": 6, "module": "CKA prep", "objective": "Speed drills — imperative kubectl, dry-run, JSONPath, exam technique",
+   "plan": ["Learn 30m: kubectl conventions + exam tips", "Lab 105m: timed killercoda scenarios; generate manifests with --dry-run=client -o yaml; jsonpath queries", "Drill 45m: your personal kubectl aliases + exam plan; checkpoint; log"],
+   "resources": [
+     {"label": "kubectl cheat sheet", "url": "https://kubernetes.io/docs/reference/kubectl/quick-reference/"},
+     {"label": "Killercoda CKA scenarios", "url": "https://killercoda.com/killer-shell-cka"}],
+   "checkpoint": {"prompt": "Which kubectl flag combination prints a resource manifest as YAML without creating it?", "pattern": "dry-run", "hint": "--___-___=client -o yaml"}},
+
+  {"day": 30, "week": 6, "module": "CKA prep", "objective": "MILESTONE: full mock CKA scenario block — then decide your exam window",
+   "plan": ["Lab 120m: continuous killercoda CKA run, exam conditions, docs-only allowed", "Drill 60m: score yourself; gap list; pick a target exam month; checkpoint; log"],
+   "resources": [
+     {"label": "Killercoda CKA scenarios", "url": "https://killercoda.com/killer-shell-cka"},
+     {"label": "CKA registration (Linux Foundation)", "url": "https://training.linuxfoundation.org/certification/certified-kubernetes-administrator-cka/"}],
+   "checkpoint": {"prompt": "How many hours long is the CKA exam?", "pattern": "\\b2\\b|two", "hint": "Performance-based, terminal-only, ___ hours."}},
+
+  {"day": 31, "week": 7, "module": "CI/CD", "objective": "Pipeline anatomy — dissect the thaddeus-daily pipeline you already own",
+   "plan": ["Learn 60m: Codecademy Intro to DevOps (CI/CD module) + MS Learn Intro to DevOps assessment", "Lab 75m: annotate every line of thaddeus-daily.yml and validate.yml in a gist — triggers, jobs, steps, secrets", "Drill 45m: stages/triggers/artifacts vocabulary cold; checkpoint; log"],
+   "resources": [
+     {"label": "Introduction to DevOps (Codecademy)", "url": "https://www.codecademy.com/learn/introduction-to-dev-ops"},
+     {"label": "Intro to DevOps (MS Learn, free assessment)", "url": "https://learn.microsoft.com/en-us/training/modules/introduction-to-devops/"},
+     {"label": "Understanding GitHub Actions", "url": "https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions"}],
+   "checkpoint": {"prompt": "In a GitHub Actions workflow file, which top-level key defines the events that trigger it?", "pattern": "\\bon\\b", "hint": "Two letters."}},
+
+  {"day": 32, "week": 7, "module": "CI/CD", "objective": "Build-and-test workflow for job_digest — lint and tests on every push",
+   "plan": ["Learn 45m: Actions quickstart + Python workflow examples", "Lab 90m: new repo workflow: checkout, setup-python, ruff/pytest on push + PR", "Drill 45m: why gates before merge (tie to a Blockgraph release you saw go sideways); checkpoint; log"],
+   "resources": [
+     {"label": "Actions quickstart", "url": "https://docs.github.com/en/actions/quickstart"},
+     {"label": "Building and testing Python", "url": "https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python"}],
+   "checkpoint": {"prompt": "Paste the 'on:' block (or its first two lines) from the workflow you wrote today.", "pattern": "push|pull_request", "hint": "It should trigger on push and/or pull_request."}},
+
+  {"day": 33, "week": 7, "module": "CI/CD", "objective": "Add image build + push to Docker Hub to the pipeline",
+   "plan": ["Learn 45m: docker/login-action + build-push-action READMEs", "Lab 90m: extend the workflow: build image, log in with secrets, push troyxag/job-digest:sha tag", "Drill 45m: where secrets live and why never in YAML, cold; checkpoint; log"],
+   "resources": [
+     {"label": "docker/build-push-action", "url": "https://github.com/docker/build-push-action"},
+     {"label": "Publishing Docker images", "url": "https://docs.github.com/en/actions/publishing-packages/publishing-docker-images"}],
+   "checkpoint": {"prompt": "Which official action authenticates to a container registry in a workflow?", "pattern": "login-action", "hint": "docker/_____-______@v3"}},
+
+  {"day": 34, "week": 7, "module": "CI/CD", "objective": "Deploy stage — pipeline updates your kind/K8s deployment; secrets management end to end",
+   "plan": ["Learn 45m: environments, encrypted secrets, deploy patterns", "Lab 90m: add a deploy job (kubectl set image or helm upgrade) gated on build success", "Drill 45m: promotion flow build->test->deploy cold; checkpoint; log"],
+   "resources": [
+     {"label": "Using secrets in Actions", "url": "https://docs.github.com/en/actions/security-guides/using-secrets-in-github-actions"},
+     {"label": "Deployment environments", "url": "https://docs.github.com/en/actions/deployment/targeting-different-environments/using-environments-for-deployment"}],
+   "checkpoint": {"prompt": "What is the expression syntax to read a secret named KUBE_CONFIG in a workflow step?", "pattern": "secrets\\.", "hint": "${{ ________.KUBE_CONFIG }}"}},
+
+  {"day": 35, "week": 7, "module": "CI/CD", "objective": "MILESTONE: full pipeline — lint, test, build, push, deploy, green end to end",
+   "plan": ["Lab 135m: polish the whole pipeline; add status badge to README; force a failure and watch gates hold", "Drill 45m: narrate the pipeline as an interview answer; checkpoint; log"],
+   "resources": [
+     {"label": "GitHub Actions docs", "url": "https://docs.github.com/en/actions"},
+     {"label": "Adding a workflow status badge", "url": "https://docs.github.com/en/actions/monitoring-and-troubleshooting-workflows/adding-a-workflow-status-badge"}],
+   "checkpoint": {"prompt": "Paste the URL of your green pipeline run (it contains /actions/runs/).", "pattern": "actions/runs/[0-9]+", "hint": "Click the run, copy the address bar."}},
+
+  {"day": 36, "week": 8, "module": "Jenkins", "objective": "Jenkins fundamentals — install it in Docker, first freestyle + first pipeline job",
+   "plan": ["Learn 60m: Jenkins docs quickstart (run in Docker)", "Lab 75m: jenkins/jenkins:lts in Docker; unlock; install plugins; hello-world pipeline job", "Drill 45m: controller vs agent cold; checkpoint; log"],
+   "resources": [
+     {"label": "Jenkins in Docker", "url": "https://www.jenkins.io/doc/book/installing/docker/"},
+     {"label": "Jenkins pipeline docs", "url": "https://www.jenkins.io/doc/book/pipeline/"}],
+   "checkpoint": {"prompt": "What is the default port the Jenkins web UI listens on?", "pattern": "8080", "hint": "Same as many Java web apps."}},
+
+  {"day": 37, "week": 8, "module": "Jenkins", "objective": "Jenkinsfile — port your GitHub Actions pipeline to declarative Jenkins syntax",
+   "plan": ["Learn 45m: declarative pipeline syntax", "Lab 90m: write a Jenkinsfile mirroring your build/test stages; run it from SCM", "Drill 45m: same pipeline, two dialects — what stayed the same? checkpoint; log"],
+   "resources": [
+     {"label": "Declarative pipeline syntax", "url": "https://www.jenkins.io/doc/book/pipeline/syntax/"},
+     {"label": "Jenkinsfile tutorial", "url": "https://www.jenkins.io/doc/book/pipeline/jenkinsfile/"}],
+   "checkpoint": {"prompt": "What is the first keyword of a declarative Jenkinsfile?", "pattern": "pipeline", "hint": "________ { agent any ... }"}},
+
+  {"day": 38, "week": 8, "module": "CI/CD", "objective": "Deployment strategies — blue/green vs canary, rollout and rollback mechanics",
+   "plan": ["Learn 60m: Fowler blue/green + canary articles + Codecademy CD article", "Lab 75m: simulate both on kind with two deployments and Service label switching", "Drill 45m: pick a strategy for a real Blockgraph release scenario and defend it; checkpoint; log"],
+   "resources": [
+     {"label": "Blue-green (Fowler)", "url": "https://martinfowler.com/bliki/BlueGreenDeployment.html"},
+     {"label": "Canary release (Fowler)", "url": "https://martinfowler.com/bliki/CanaryRelease.html"},
+     {"label": "CD and Deployment (Codecademy)", "url": "https://www.codecademy.com/article/continuous-delivery-and-deployment"}],
+   "checkpoint": {"prompt": "Which deployment strategy shifts a small percentage of real traffic to the new version first?", "pattern": "canary", "hint": "Named after a bird in a coal mine."}},
+
+  {"day": 39, "week": 8, "module": "Bitbucket + Jira", "objective": "Port the pipeline to Bitbucket Pipelines and wire Jira smart commits — your versatility play",
+   "plan": ["Learn 45m: bitbucket-pipelines.yml syntax + Jira smart commits", "Lab 90m: mirror repo to Bitbucket; port build/test stages; link a Jira ticket via smart commit", "Drill 45m: Actions vs Bitbucket Pipelines vs Jenkins — 90-second comparison answer; checkpoint; log"],
+   "resources": [
+     {"label": "Bitbucket Pipelines get started", "url": "https://support.atlassian.com/bitbucket-cloud/docs/get-started-with-bitbucket-pipelines/"},
+     {"label": "Jira smart commits", "url": "https://support.atlassian.com/jira-software-cloud/docs/process-issues-with-smart-commits/"}],
+   "checkpoint": {"prompt": "What is the exact filename Bitbucket Pipelines reads from the repo root?", "pattern": "bitbucket-pipelines\\.ya?ml", "hint": "Hyphenated, .yml"}},
+
+  {"day": 40, "week": 8, "module": "GitOps", "objective": "MILESTONE: GitOps concepts + written three-way CI comparison for your portfolio",
+   "plan": ["Learn 60m: ArgoCD core concepts + GitOps principles (read-level, not install)", "Lab 75m: write the comparison doc: Actions vs Jenkins vs Bitbucket — triggers, secrets, agents, when to choose which; commit to portfolio", "Drill 45m: explain GitOps pull model vs push pipelines; checkpoint; log"],
+   "resources": [
+     {"label": "ArgoCD core concepts", "url": "https://argo-cd.readthedocs.io/en/stable/core_concepts/"},
+     {"label": "OpenGitOps principles", "url": "https://opengitops.dev/"}],
+   "checkpoint": {"prompt": "In GitOps, what is the single source of truth for the desired state of the system?", "pattern": "git", "hint": "It is in the name."}},
+
+  {"day": 41, "week": 9, "module": "Terraform", "objective": "IaC mental model — HCL, init/plan/apply/destroy loop on real AWS free tier",
+   "plan": ["Learn 60m: Terraform get-started (AWS track) — you have SNS/Terraform history, now formalize it", "Lab 75m: provision an S3 bucket + tags from scratch; plan, apply, change, re-plan, destroy", "Drill 45m: declarative vs imperative cold; checkpoint; log"],
+   "resources": [
+     {"label": "Terraform AWS get started", "url": "https://developer.hashicorp.com/terraform/tutorials/aws-get-started"},
+     {"label": "Terraform Expedition (Codecademy)", "url": "https://www.codecademy.com/learn/ext-paths/terraform-expedition-exploring-infrastructure-as-code"}],
+   "checkpoint": {"prompt": "Which terraform command previews changes without applying them?", "pattern": "terraform[[:space:]]+plan|\\bplan\\b", "hint": "terraform ____"}},
+
+  {"day": 42, "week": 9, "module": "Terraform", "objective": "State — what it is, why it's sacred, local vs remote backends",
+   "plan": ["Learn 60m: state docs + remote backend on S3", "Lab 75m: inspect terraform.tfstate; move state to an S3 backend with locking; terraform state list/show", "Drill 45m: what happens if two people apply at once, cold; checkpoint; log"],
+   "resources": [
+     {"label": "Terraform state", "url": "https://developer.hashicorp.com/terraform/language/state"},
+     {"label": "S3 backend", "url": "https://developer.hashicorp.com/terraform/language/backend/s3"}],
+   "checkpoint": {"prompt": "What is the default local filename where Terraform stores its state?", "pattern": "tfstate", "hint": "terraform.___ __"}},
+
+  {"day": 43, "week": 9, "module": "Terraform", "objective": "Variables, outputs, modules — stop copy-pasting infrastructure",
+   "plan": ["Learn 60m: variables/outputs/modules docs", "Lab 75m: refactor your config into a module with variables + outputs; call it twice (dev/prod)", "Drill 45m: module inputs/outputs as function signature analogy; checkpoint; log"],
+   "resources": [
+     {"label": "Terraform variables", "url": "https://developer.hashicorp.com/terraform/language/values/variables"},
+     {"label": "Terraform modules", "url": "https://developer.hashicorp.com/terraform/language/modules"}],
+   "checkpoint": {"prompt": "Which block type declares an input variable in Terraform?", "pattern": "variable", "hint": "________ \"instance_type\" { }"}},
+
+  {"day": 44, "week": 9, "module": "Terraform", "objective": "Rebuild your Blockgraph proof point — S3 + IAM + SNS alerting stack, this time from scratch",
+   "plan": ["Learn 30m: aws_sns_topic + aws_iam_policy resource docs", "Lab 105m: Terraform an SNS topic, subscription, IAM role/policy, S3 event notification — the backup-alerting pattern you supported, now authored", "Drill 45m: this IS your interview story upgrade — rehearse it; checkpoint; log"],
+   "resources": [
+     {"label": "AWS provider docs", "url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs"},
+     {"label": "Terraform AWS get started", "url": "https://developer.hashicorp.com/terraform/tutorials/aws-get-started"}],
+   "checkpoint": {"prompt": "Paste one resource address from your `terraform state list` output (e.g. aws_sns_topic.alerts).", "pattern": "aws_[a-z0-9_]+\\.", "hint": "type.name format."}},
+
+  {"day": 45, "week": 9, "module": "Terraform", "objective": "MILESTONE: destroy and recreate the whole stack from nothing — prove idempotency, then CI it",
+   "plan": ["Lab 120m: terraform destroy; apply from clean; add fmt/validate/plan job to GitHub Actions on the infra repo", "Drill 60m: IaC talking points — drift, review, state locking; checkpoint; log"],
+   "resources": [
+     {"label": "Terraform in CI (Actions)", "url": "https://developer.hashicorp.com/terraform/tutorials/automation/github-actions"},
+     {"label": "Terraform CLI docs", "url": "https://developer.hashicorp.com/terraform/cli"}],
+   "checkpoint": {"prompt": "Which terraform command tears down everything the state manages?", "pattern": "destroy", "hint": "The scary one."}},
+
+  {"day": 46, "week": 10, "module": "AWS SAA", "objective": "SAA sprint: IAM + EC2 — the identity and compute exam domains",
+   "plan": ["Learn 90m: Codecademy SAA-C03 path (IAM, EC2 sections) + Skill Builder plan", "Lab 60m: hands-on in free tier: launch/stop instance, instance profile role, policy simulator", "Drill 30m: 15 practice questions; checkpoint; log"],
+   "resources": [
+     {"label": "SAA-C03 Cert Prep (Codecademy)", "url": "https://www.codecademy.com/learn/ext-paths/saa-c03-aws-certified-solutions-architect-associate"},
+     {"label": "AWS Skill Builder (free plan)", "url": "https://explore.skillbuilder.aws/"},
+     {"label": "Tutorials Dojo SAA cheat sheets", "url": "https://tutorialsdojo.com/aws-certified-solutions-architect-associate-saa-c03/"}],
+   "checkpoint": {"prompt": "Which AWS service issues the temporary credentials behind an assumed IAM role?", "pattern": "sts|security token", "hint": "Three letters, in every AssumeRole answer."}},
+
+  {"day": 47, "week": 10, "module": "AWS SAA", "objective": "SAA sprint: S3 + storage — classes, lifecycle, EBS vs EFS",
+   "plan": ["Learn 90m: SAA path storage sections", "Lab 60m: bucket with lifecycle rule to IA/Glacier; version + replicate", "Drill 30m: 15 practice questions; checkpoint; log"],
+   "resources": [
+     {"label": "SAA-C03 Cert Prep (Codecademy)", "url": "https://www.codecademy.com/learn/ext-paths/saa-c03-aws-certified-solutions-architect-associate"},
+     {"label": "S3 storage classes", "url": "https://aws.amazon.com/s3/storage-classes/"}],
+   "checkpoint": {"prompt": "Which S3 storage class fits data accessed rarely but needing millisecond retrieval?", "pattern": "standard-?ia|infrequent", "hint": "Standard-__ (Infrequent Access)."}},
+
+  {"day": 48, "week": 10, "module": "AWS SAA", "objective": "SAA sprint: VPC networking — subnets, route tables, gateways, endpoints",
+   "plan": ["Learn 90m: SAA path VPC sections — your weakest-on-paper, most-asked domain", "Lab 60m: build a VPC: public+private subnets, IGW, NAT, route tables; EC2 in private reaching internet", "Drill 30m: 15 practice questions; checkpoint; log"],
+   "resources": [
+     {"label": "SAA-C03 Cert Prep (Codecademy)", "url": "https://www.codecademy.com/learn/ext-paths/saa-c03-aws-certified-solutions-architect-associate"},
+     {"label": "VPC docs", "url": "https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html"}],
+   "checkpoint": {"prompt": "Which component lets instances in a private subnet reach the internet outbound-only?", "pattern": "nat", "hint": "___ gateway."}},
+
+  {"day": 49, "week": 10, "module": "AWS SAA", "objective": "SAA sprint: databases — RDS, Aurora, DynamoDB, ElastiCache (you ran RDS; now architect it)",
+   "plan": ["Learn 90m: SAA path database sections", "Lab 60m: free-tier RDS with Multi-AZ reading + DynamoDB table with on-demand capacity", "Drill 30m: 15 practice questions; checkpoint; log"],
+   "resources": [
+     {"label": "SAA-C03 Cert Prep (Codecademy)", "url": "https://www.codecademy.com/learn/ext-paths/saa-c03-aws-certified-solutions-architect-associate"},
+     {"label": "RDS Multi-AZ", "url": "https://aws.amazon.com/rds/features/multi-az/"}],
+   "checkpoint": {"prompt": "Which RDS feature provides a synchronous standby replica for automatic failover?", "pattern": "multi-?az", "hint": "Not read replicas — the other one."}},
+
+  {"day": 50, "week": 10, "module": "AWS SAA", "objective": "MILESTONE: domain quiz day — Skill Builder practice set across the week's domains",
+   "plan": ["Drill 120m: timed practice questions across IAM/EC2/S3/VPC/DB; review every miss to the doc", "Learn 60m: re-study the two weakest topics from misses; checkpoint; log"],
+   "resources": [
+     {"label": "AWS Skill Builder (free plan)", "url": "https://explore.skillbuilder.aws/"},
+     {"label": "Tutorials Dojo SAA cheat sheets", "url": "https://tutorialsdojo.com/aws-certified-solutions-architect-associate-saa-c03/"}],
+   "checkpoint": {"prompt": "What percent did you score on today's practice set? (Honest number, two digits.)", "pattern": "[0-9]{2}", "hint": "Just the number."}},
+
+  {"day": 51, "week": 11, "module": "AWS SAA", "objective": "SAA sprint: high availability — ELB, Auto Scaling, multi-AZ/multi-region design",
+   "plan": ["Learn 90m: SAA path resilience sections", "Lab 60m: ALB + Auto Scaling group serving your app AMI; kill an instance, watch it heal", "Drill 30m: 15 practice questions; checkpoint; log"],
+   "resources": [
+     {"label": "SAA-C03 Cert Prep (Codecademy)", "url": "https://www.codecademy.com/learn/ext-paths/saa-c03-aws-certified-solutions-architect-associate"},
+     {"label": "Well-Architected Framework", "url": "https://aws.amazon.com/architecture/well-architected/"}],
+   "checkpoint": {"prompt": "Which AWS service replaces unhealthy instances to maintain a desired capacity?", "pattern": "auto ?scaling", "hint": "____ _______ group."}},
+
+  {"day": 52, "week": 11, "module": "AWS SAA", "objective": "SAA sprint: security — KMS, encryption at rest/in transit, Secrets Manager, GuardDuty",
+   "plan": ["Learn 90m: SAA path security sections (your SOC2 background gives you a head start — use it)", "Lab 60m: KMS key + encrypted S3 bucket + Secrets Manager secret rotation walkthrough", "Drill 30m: 15 practice questions; checkpoint; log"],
+   "resources": [
+     {"label": "SAA-C03 Cert Prep (Codecademy)", "url": "https://www.codecademy.com/learn/ext-paths/saa-c03-aws-certified-solutions-architect-associate"},
+     {"label": "KMS docs", "url": "https://docs.aws.amazon.com/kms/latest/developerguide/overview.html"}],
+   "checkpoint": {"prompt": "Which AWS service creates and manages encryption keys?", "pattern": "kms", "hint": "Three letters."}},
+
+  {"day": 53, "week": 11, "module": "AWS SAA", "objective": "SAA sprint: cost + Well-Architected — the tiebreaker knowledge for 'MOST cost-effective' questions",
+   "plan": ["Learn 90m: pricing models (on-demand/reserved/spot), cost tools, WAF pillars", "Lab 60m: Pricing Calculator exercise; tag-based cost allocation demo", "Drill 30m: 15 practice questions; checkpoint; log"],
+   "resources": [
+     {"label": "Well-Architected Framework", "url": "https://aws.amazon.com/architecture/well-architected/"},
+     {"label": "EC2 pricing models", "url": "https://aws.amazon.com/ec2/pricing/"}],
+   "checkpoint": {"prompt": "How many pillars does the AWS Well-Architected Framework have?", "pattern": "\\b6\\b|six", "hint": "Operational excellence, security, reliability, performance, cost, sustainability."}},
+
+  {"day": 54, "week": 11, "module": "AWS SAA", "objective": "Full-length timed practice exam under real conditions",
+   "plan": ["Drill 130m: 65 questions, 130 minutes, no pausing — Skill Builder official practice set", "Learn 50m: review every miss; update gap list; checkpoint; log"],
+   "resources": [
+     {"label": "AWS Skill Builder (free plan)", "url": "https://explore.skillbuilder.aws/"},
+     {"label": "SAA-C03 exam guide (official)", "url": "https://aws.amazon.com/certification/certified-solutions-architect-associate/"}],
+   "checkpoint": {"prompt": "Your full practice exam score, as a percent (two or three digits).", "pattern": "[0-9]{2}", "hint": "Passing the real thing needs 720/1000 — aim 80%+ on practice."}},
+
+  {"day": 55, "week": 11, "module": "AWS SAA", "objective": "MILESTONE: book the real SAA-C03 exam — a scheduled date is what turns studying into finishing",
+   "plan": ["Lab 60m: register at AWS certification portal; pick date 1-3 weeks out; pay the $150", "Learn 90m: weak-domain review sprint from your gap list", "Drill 30m: checkpoint (the date!); log"],
+   "resources": [
+     {"label": "Schedule your exam", "url": "https://aws.amazon.com/certification/certified-solutions-architect-associate/"},
+     {"label": "Tutorials Dojo SAA cheat sheets", "url": "https://tutorialsdojo.com/aws-certified-solutions-architect-associate-saa-c03/"}],
+   "checkpoint": {"prompt": "Paste your scheduled exam date in YYYY-MM-DD format.", "pattern": "20[0-9]{2}-[0-9]{2}-[0-9]{2}", "hint": "It has to be booked, not intended."}},
+
+  {"day": 56, "week": 12, "module": "Capstone", "objective": "Capstone day 1: one repo, whole story — app + Dockerfile + Helm chart + pipeline + Terraform, wired together",
+   "plan": ["Lab 150m: create the capstone repo; pull in your best versions of each artifact; make the pipeline deploy to kind via your chart", "Drill 30m: README skeleton with architecture section; checkpoint; log"],
+   "resources": [
+     {"label": "Your pipeline reference", "url": "https://github.com/Troyxag/thaddeus-daily"},
+     {"label": "README guide (Make a README)", "url": "https://www.makeareadme.com/"}],
+   "checkpoint": {"prompt": "Paste the URL of your capstone repository.", "pattern": "github\\.com/Troyxag/[A-Za-z0-9._-]+", "hint": "github.com/Troyxag/<something>"}},
+
+  {"day": 57, "week": 12, "module": "Capstone", "objective": "Capstone day 2: monitoring wired in + architecture diagram + honest docs",
+   "plan": ["Lab 120m: Prometheus/Grafana monitoring the capstone; alert rule to Slack; architecture diagram (mermaid or draw.io) in README", "Drill 60m: write the 'decisions and tradeoffs' section — interviewers love this; checkpoint; log"],
+   "resources": [
+     {"label": "Mermaid diagrams in Markdown", "url": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-diagrams"},
+     {"label": "Grafana fundamentals", "url": "https://grafana.com/tutorials/grafana-fundamentals/"}],
+   "checkpoint": {"prompt": "Paste one Markdown heading line from the README section you wrote today (starts with #).", "pattern": "#", "hint": "e.g. ## Architecture"}},
+
+  {"day": 58, "week": 12, "module": "Capstone", "objective": "Capstone day 3: polish, demo script, and the 90-second walkthrough",
+   "plan": ["Lab 90m: badges, clean commit history, license, topics; record or script a 90-second demo", "Drill 90m: deliver the walkthrough aloud 3 times, tighter each round; checkpoint; log"],
+   "resources": [
+     {"label": "GitHub repo topics/about", "url": "https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/classifying-your-repository-with-topics"},
+     {"label": "Your capstone", "url": "https://github.com/Troyxag"}],
+   "checkpoint": {"prompt": "Write your capstone's one-line elevator pitch (40+ characters, make it count).", "pattern": ".{40,}", "hint": "What it does + what it proves about you."}},
+
+  {"day": 59, "week": 12, "module": "Interview prep", "objective": "Mock interview gauntlet — technical deep-dives on everything you built, plus the story arc",
+   "plan": ["Drill 180m (session-heavy day): Thaddeus grills you — Docker internals, K8s failure scenarios, pipeline design, Terraform state, AWS architecture; then behavioral: the 'fix the system' arc from Taboola to capstone"],
+   "resources": [
+     {"label": "KodeKloud Engineer (free practice tasks)", "url": "https://engineer.kodekloud.com/practice"},
+     {"label": "Your capstone (know every line)", "url": "https://github.com/Troyxag"}],
+   "checkpoint": {"prompt": "Which artifact now anchors your 'I fix the system, not the ticket' story? (One sentence.)", "pattern": ".{20,}", "hint": "Probably the capstone — say why."}},
+
+  {"day": 60, "week": 12, "module": "Wrap", "objective": "MILESTONE: portfolio + resume sync, SAA exam locked, DOP-C02 90-day plan written",
+   "plan": ["Lab 90m: fold capstone/CKA-prep/pipeline bullets into resume + portfolio site; pin repos on GitHub profile", "Learn 60m: skim DOP-C02 exam guide; sketch the 90-day plan", "Drill 30m: final checkpoint; final log; streak retrospective"],
+   "resources": [
+     {"label": "DOP-C02 Cert Prep (Codecademy)", "url": "https://www.codecademy.com/learn/ext-paths/dop-c02-aws-certified-devops-engineer-professional"},
+     {"label": "DOP-C02 exam page", "url": "https://aws.amazon.com/certification/certified-devops-engineer-professional/"}],
+   "checkpoint": {"prompt": "What date will you start DOP-C02 prep? (YYYY-MM-DD)", "pattern": "20[0-9]{2}-[0-9]{2}-[0-9]{2}", "hint": "~90 days out is the plan."}}
 ]

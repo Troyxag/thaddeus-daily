@@ -1,6 +1,16 @@
 # Resource Library — Deep Dives by Module
 
-The daily briefing stays at 2–3 links on purpose (one objective, one tab). This is the fuller shelf for when you want depth on your own time. Everything here is free unless marked **[paid]**.
+The daily briefing carries each day's 2–3 working links. This is the fuller shelf for when you want depth on your own time. Everything here is free unless marked **[paid]**.
+
+## Free guided platforms (v2 additions)
+
+- [100 Days of DevOps (KodeKloud)](https://kodekloud.com/100-days-of-devops) — free hands-on task series; the guided-lab backbone for Linux/shell/Git days
+- [KodeKloud Engineer](https://engineer.kodekloud.com/practice) — free real-world practice tasks; interview-prep gold in Week 12
+- [AWS Skill Builder — DevOps Engineering Learning Plan](https://explore.skillbuilder.aws/learn/public/learning_plan/view/85/devops-engineering-learning-plan) — AWS's own free curriculum; anchors Weeks 10–11
+- [MS Learn: Introduction to DevOps](https://learn.microsoft.com/en-us/training/modules/introduction-to-devops/) — free conceptual module with a built-in assessment (Day 31)
+- [Linux Journey](https://linuxjourney.com/) — free structured Linux fundamentals (Day 6)
+- [Learn Git Branching](https://learngitbranching.js.org/) — the interactive git visualizer (Day 7)
+- [Killercoda CKA scenarios](https://killercoda.com/killer-shell-cka) — free exam-style Kubernetes scenarios (Week 6)
 
 ## Docker (Days 1–5)
 

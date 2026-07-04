@@ -13,19 +13,40 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: curriculum.json schema check
+      - name: curriculum.json schema check (v2)
         run: |
           set -euo pipefail
-          jq -e 'type == "array" and length >= 21' curriculum.json > /dev/null
+          jq -e 'type == "array" and length == 60' curriculum.json > /dev/null
           jq -e 'all(.[];
                   (.day | type == "number") and
+                  (.week | type == "number") and
                   (.module | type == "string" and length > 0) and
                   (.objective | type == "string" and length > 0) and
+                  (.plan | type == "array" and length >= 1 and all(.[]; type == "string" and length > 0)) and
                   (.resources | type == "array" and length >= 1 and
                     all(.[]; (.label | type == "string" and length > 0) and
-                             (.url | type == "string" and startswith("https://")))))' curriculum.json > /dev/null
-          jq -e '([.[].day] | unique | length) == length' curriculum.json > /dev/null
-          echo "curriculum.json OK"
+                             (.url | type == "string" and startswith("https://")))) and
+                  (.checkpoint | (.prompt | type == "string" and length > 0) and
+                                 (.pattern | type == "string" and length > 0) and
+                                 (.hint | type == "string" and length > 0)))' curriculum.json > /dev/null
+          jq -e '([.[].day] | unique | length) == 60 and ([.[].day] | min) == 1 and ([.[].day] | max) == 60' curriculum.json > /dev/null
+          echo "curriculum.json OK (60 days, v2 schema)"
+
+      - name: checkpoint patterns are valid regex
+        run: |
+          set -euo pipefail
+          while IFS= read -r p; do
+            # grep exits 1 on "no match" (expected vs /dev/null) — the || guard keeps
+            # set -e from killing the script so we can inspect the real code. Only >=2
+            # (invalid regex) is a failure.
+            rc=0
+            grep -E "$p" /dev/null > /dev/null 2>&1 || rc=$?
+            if [ "$rc" -ge 2 ]; then
+              echo "Invalid regex pattern: $p" >&2
+              exit 1
+            fi
+          done < <(jq -r '.[].checkpoint.pattern' curriculum.json)
+          echo "All 60 checkpoint patterns compile"
 
       - name: state/day.txt sanity check
         run: |
@@ -48,7 +69,7 @@ jobs:
       - name: dry-run briefing build for every day (no Slack post)
         run: |
           set -euo pipefail
-          for D in $(jq -r '.[].day' curriculum.json) 22 30; do
+          for D in $(jq -r '.[].day' curriculum.json) 61; do
             bash scripts/build_briefing.sh "$D" | jq -e '.text | length > 0' > /dev/null
-            echo "Day $D briefing builds OK"
           done
+          echo "All 60 day briefings + completion message build OK"

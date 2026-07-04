@@ -49,6 +49,20 @@ Day 22+ automatically switches to AWS cert-prep mode (per curriculum §5.5).
 - **Skipping/reordering:** set `day.txt` to any number.
 - **Your permanent log** stays in `session-log.md` in the project folder (confidence scores, distractions, parked items). `day.txt` only drives the bot.
 
+## Branching & testing
+
+This repo runs **GitHub Flow** — `main` is production, because the 1 PM cron ships whatever `main` contains.
+
+1. Branch off `main` for any change: `feat/...` (new capability), `fix/...` (bug), `chore/...` (housekeeping)
+2. Push the branch and open a PR
+3. The **Validate** workflow runs automatically on every PR: curriculum schema check, `day.txt` sanity, YAML parse of all workflows, and a dry-run build of *every* day's briefing (nothing is posted to Slack)
+4. Green check → **Squash and merge** → delete the branch
+5. Exception: `state/day.txt` bumps are operational data, not code — commit those straight to `main`
+
+The briefing-building logic lives in `scripts/build_briefing.sh`, shared by both workflows: the daily job pipes its output to Slack; Validate just checks it builds. Logic in scripts, YAML kept thin — that's the pattern to carry into every pipeline you write.
+
+**Optional hardening:** Settings → Branches → add a ruleset/protection rule on `main` requiring PRs and a passing Validate check. Leave admin bypass on so your own quick day.txt web-edits stay one-click.
+
 ## Notes
 
 - Free on both platforms (Slack free tier allows 10 integrations; Actions minutes are free well beyond this usage).

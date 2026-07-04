@@ -36,7 +36,11 @@ jobs:
         run: |
           set -euo pipefail
           while IFS= read -r p; do
-            grep -E "$p" /dev/null > /dev/null 2>&1; rc=$?
+            # grep exits 1 on "no match" (expected vs /dev/null) — the || guard keeps
+            # set -e from killing the script so we can inspect the real code. Only >=2
+            # (invalid regex) is a failure.
+            rc=0
+            grep -E "$p" /dev/null > /dev/null 2>&1 || rc=$?
             if [ "$rc" -ge 2 ]; then
               echo "Invalid regex pattern: $p" >&2
               exit 1

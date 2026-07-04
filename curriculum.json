@@ -1,23 +1,99 @@
 [
-  {"day": 1, "module": "Docker", "objective": "Explain the image/container/Dockerfile mental model; write a first Dockerfile for a trivial app", "url": "https://www.codecademy.com/learn/ext-courses/working-with-containers-introduction-to-docker", "link_label": "Intro to Docker"},
-  {"day": 2, "module": "Docker", "objective": "Multi-stage builds — shrink a bloated image and explain why each stage exists", "url": "https://www.codecademy.com/learn/ext-courses/working-with-containers-introduction-to-docker", "link_label": "Intro to Docker"},
-  {"day": 3, "module": "Docker", "objective": "Docker Compose — wire up a two-service local setup", "url": "https://www.codecademy.com/article/mastering-docker-compose", "link_label": "Mastering Docker Compose"},
-  {"day": 4, "module": "Docker", "objective": "Container networking and volumes — persist data across a container restart", "url": "https://www.codecademy.com/article/docker-networking", "link_label": "Docker Networking"},
-  {"day": 5, "module": "Docker", "objective": "Milestone: containerize job_digest.py with a clean, justified Dockerfile", "url": "https://www.codecademy.com/learn/ext-courses/working-with-containers-introduction-to-docker", "link_label": "Intro to Docker"},
-  {"day": 6, "module": "SQL drill 1", "objective": "Joins — inner/left/right/full, cold, timed", "url": "https://www.codecademy.com/learn/paths/analyze-data-with-sql", "link_label": "Analyze Data with SQL"},
-  {"day": 7, "module": "Kubernetes", "objective": "Write a Deployment + Service manifest from scratch, no copy-paste", "url": "https://www.codecademy.com/learn/ext-courses/working-with-containers-introduction-to-kubernetes", "link_label": "Intro to Kubernetes"},
-  {"day": 8, "module": "Kubernetes", "objective": "ConfigMaps and Secrets — inject config without hardcoding", "url": "https://www.codecademy.com/learn/ext-courses/working-with-containers-introduction-to-kubernetes", "link_label": "Intro to Kubernetes"},
-  {"day": 9, "module": "Kubernetes", "objective": "Services and Ingress — expose an app correctly", "url": "https://www.codecademy.com/learn/ext-courses/working-with-containers-introduction-to-kubernetes", "link_label": "Intro to Kubernetes"},
-  {"day": 10, "module": "Kubernetes", "objective": "RBAC and NetworkPolicies — restrict access, then break and fix one", "url": "https://www.codecademy.com/learn/ext-paths/certified-kubernetes-administrator-cka-2024", "link_label": "CKA 2024 Cert Prep"},
-  {"day": 11, "module": "Kubernetes", "objective": "Milestone: deploy the Module 2 app to a personal cluster with monitoring wired up", "url": "https://www.codecademy.com/learn/ext-paths/certified-kubernetes-administrator-cka-2024", "link_label": "CKA 2024 Cert Prep"},
-  {"day": 12, "module": "SQL drill 2", "objective": "Subqueries and CTEs, cold, timed", "url": "https://www.codecademy.com/learn/paths/analyze-data-with-sql", "link_label": "Analyze Data with SQL"},
-  {"day": 13, "module": "CI/CD", "objective": "Pipeline anatomy — stages, triggers, artifacts, explained cold", "url": "https://www.codecademy.com/learn/introduction-to-dev-ops", "link_label": "Introduction to DevOps"},
-  {"day": 14, "module": "CI/CD", "objective": "First GitHub Actions workflow — build and test on push", "url": "https://docs.github.com/en/actions", "link_label": "GitHub Actions docs"},
-  {"day": 15, "module": "CI/CD", "objective": "Add image build + registry push to the pipeline", "url": "https://www.codecademy.com/article/continuous-integration", "link_label": "Continuous Integration"},
-  {"day": 16, "module": "CI/CD", "objective": "Deployment strategies — blue/green vs. canary, and where secrets live in a pipeline", "url": "https://www.codecademy.com/article/continuous-delivery-and-deployment", "link_label": "Continuous Delivery and Deployment"},
-  {"day": 17, "module": "CI/CD", "objective": "Milestone: full pipeline for the Dockerized job_digest.py — build, test, push, deploy", "url": "https://docs.github.com/en/actions", "link_label": "GitHub Actions docs"},
-  {"day": 18, "module": "SQL drill 3", "objective": "Aggregation — GROUP BY / HAVING, cold, timed", "url": "https://www.codecademy.com/learn/paths/analyze-data-with-sql", "link_label": "Analyze Data with SQL"},
-  {"day": 19, "module": "SQL drill 4", "objective": "Window functions, cold, timed", "url": "https://www.codecademy.com/learn/paths/analyze-data-with-sql", "link_label": "Analyze Data with SQL"},
-  {"day": 20, "module": "SQL drill 5", "objective": "Indexing intuition — why a query is slow, not just what it returns", "url": "https://www.codecademy.com/learn/paths/analyze-data-with-sql", "link_label": "Analyze Data with SQL"},
-  {"day": 21, "module": "SQL drill 6", "objective": "Milestone: timed mixed set against a mock incident/ticket dataset", "url": "https://www.codecademy.com/learn/paths/analyze-data-with-sql", "link_label": "Analyze Data with SQL"}
+  {"day": 1, "module": "Docker", "objective": "Explain the image/container/Dockerfile mental model; write a first Dockerfile for a trivial app", "resources": [
+    {"label": "Intro to Docker (Codecademy)", "url": "https://www.codecademy.com/learn/ext-courses/working-with-containers-introduction-to-docker"},
+    {"label": "Docker Get Started", "url": "https://docs.docker.com/get-started/"},
+    {"label": "Dockerfile reference", "url": "https://docs.docker.com/reference/dockerfile/"}
+  ]},
+  {"day": 2, "module": "Docker", "objective": "Multi-stage builds — shrink a bloated image and explain why each stage exists", "resources": [
+    {"label": "Intro to Docker (Codecademy)", "url": "https://www.codecademy.com/learn/ext-courses/working-with-containers-introduction-to-docker"},
+    {"label": "Multi-stage builds", "url": "https://docs.docker.com/build/building/multi-stage/"},
+    {"label": "Build best practices", "url": "https://docs.docker.com/build/building/best-practices/"}
+  ]},
+  {"day": 3, "module": "Docker", "objective": "Docker Compose — wire up a two-service local setup", "resources": [
+    {"label": "Mastering Docker Compose (Codecademy)", "url": "https://www.codecademy.com/article/mastering-docker-compose"},
+    {"label": "Compose quickstart", "url": "https://docs.docker.com/compose/gettingstarted/"}
+  ]},
+  {"day": 4, "module": "Docker", "objective": "Container networking and volumes — persist data across a container restart", "resources": [
+    {"label": "Docker Networking (Codecademy)", "url": "https://www.codecademy.com/article/docker-networking"},
+    {"label": "Networking docs", "url": "https://docs.docker.com/engine/network/"},
+    {"label": "Volumes docs", "url": "https://docs.docker.com/engine/storage/volumes/"}
+  ]},
+  {"day": 5, "module": "Docker", "objective": "Milestone: containerize job_digest.py with a clean, justified Dockerfile", "resources": [
+    {"label": "Build best practices", "url": "https://docs.docker.com/build/building/best-practices/"},
+    {"label": "Dockerfile reference", "url": "https://docs.docker.com/reference/dockerfile/"}
+  ]},
+  {"day": 6, "module": "SQL drill 1", "objective": "Joins — inner/left/right/full, cold, timed", "resources": [
+    {"label": "Analyze Data with SQL (Codecademy)", "url": "https://www.codecademy.com/learn/paths/analyze-data-with-sql"},
+    {"label": "SQLBolt joins", "url": "https://sqlbolt.com/lesson/select_queries_with_joins"},
+    {"label": "PGExercises joins", "url": "https://pgexercises.com/questions/joins/"}
+  ]},
+  {"day": 7, "module": "Kubernetes", "objective": "Write a Deployment + Service manifest from scratch, no copy-paste", "resources": [
+    {"label": "Intro to Kubernetes (Codecademy)", "url": "https://www.codecademy.com/learn/ext-courses/working-with-containers-introduction-to-kubernetes"},
+    {"label": "Deployments", "url": "https://kubernetes.io/docs/concepts/workloads/controllers/deployment/"},
+    {"label": "Killercoda K8s playground", "url": "https://killercoda.com/playgrounds/scenario/kubernetes"}
+  ]},
+  {"day": 8, "module": "Kubernetes", "objective": "ConfigMaps and Secrets — inject config without hardcoding", "resources": [
+    {"label": "Intro to Kubernetes (Codecademy)", "url": "https://www.codecademy.com/learn/ext-courses/working-with-containers-introduction-to-kubernetes"},
+    {"label": "ConfigMaps", "url": "https://kubernetes.io/docs/concepts/configuration/configmap/"},
+    {"label": "Secrets", "url": "https://kubernetes.io/docs/concepts/configuration/secret/"}
+  ]},
+  {"day": 9, "module": "Kubernetes", "objective": "Services and Ingress — expose an app correctly", "resources": [
+    {"label": "Intro to Kubernetes (Codecademy)", "url": "https://www.codecademy.com/learn/ext-courses/working-with-containers-introduction-to-kubernetes"},
+    {"label": "Services", "url": "https://kubernetes.io/docs/concepts/services-networking/service/"},
+    {"label": "Ingress", "url": "https://kubernetes.io/docs/concepts/services-networking/ingress/"}
+  ]},
+  {"day": 10, "module": "Kubernetes", "objective": "RBAC and NetworkPolicies — restrict access, then break and fix one", "resources": [
+    {"label": "CKA 2024 Cert Prep (Codecademy)", "url": "https://www.codecademy.com/learn/ext-paths/certified-kubernetes-administrator-cka-2024"},
+    {"label": "RBAC", "url": "https://kubernetes.io/docs/reference/access-authn-authz/rbac/"},
+    {"label": "NetworkPolicies", "url": "https://kubernetes.io/docs/concepts/services-networking/network-policies/"}
+  ]},
+  {"day": 11, "module": "Kubernetes", "objective": "Milestone: deploy the Module 2 app to a personal cluster with monitoring wired up", "resources": [
+    {"label": "kind quickstart", "url": "https://kind.sigs.k8s.io/docs/user/quick-start/"},
+    {"label": "CKA 2024 Cert Prep (Codecademy)", "url": "https://www.codecademy.com/learn/ext-paths/certified-kubernetes-administrator-cka-2024"}
+  ]},
+  {"day": 12, "module": "SQL drill 2", "objective": "Subqueries and CTEs, cold, timed", "resources": [
+    {"label": "Analyze Data with SQL (Codecademy)", "url": "https://www.codecademy.com/learn/paths/analyze-data-with-sql"},
+    {"label": "Mode SQL tutorial", "url": "https://mode.com/sql-tutorial"},
+    {"label": "PGExercises", "url": "https://pgexercises.com/"}
+  ]},
+  {"day": 13, "module": "CI/CD", "objective": "Pipeline anatomy — stages, triggers, artifacts, explained cold", "resources": [
+    {"label": "Introduction to DevOps (Codecademy)", "url": "https://www.codecademy.com/learn/introduction-to-dev-ops"},
+    {"label": "Continuous Integration (Codecademy)", "url": "https://www.codecademy.com/article/continuous-integration"},
+    {"label": "GitHub Actions docs", "url": "https://docs.github.com/en/actions"}
+  ]},
+  {"day": 14, "module": "CI/CD", "objective": "First GitHub Actions workflow — build and test on push", "resources": [
+    {"label": "Actions quickstart", "url": "https://docs.github.com/en/actions/quickstart"},
+    {"label": "Your own thaddeus-daily pipeline", "url": "https://github.com/Troyxag/thaddeus-daily/blob/main/.github/workflows/thaddeus-daily.yml"}
+  ]},
+  {"day": 15, "module": "CI/CD", "objective": "Add image build + registry push to the pipeline", "resources": [
+    {"label": "Publishing Docker images", "url": "https://docs.github.com/en/actions/publishing-packages/publishing-docker-images"},
+    {"label": "docker/build-push-action", "url": "https://github.com/docker/build-push-action"}
+  ]},
+  {"day": 16, "module": "CI/CD", "objective": "Deployment strategies — blue/green vs. canary, and where secrets live in a pipeline", "resources": [
+    {"label": "Continuous Delivery and Deployment (Codecademy)", "url": "https://www.codecademy.com/article/continuous-delivery-and-deployment"},
+    {"label": "Blue-green (Fowler)", "url": "https://martinfowler.com/bliki/BlueGreenDeployment.html"},
+    {"label": "Actions secrets", "url": "https://docs.github.com/en/actions/security-guides/using-secrets-in-github-actions"}
+  ]},
+  {"day": 17, "module": "CI/CD", "objective": "Milestone: full pipeline for the Dockerized job_digest.py — build, test, push, deploy", "resources": [
+    {"label": "GitHub Actions docs", "url": "https://docs.github.com/en/actions"},
+    {"label": "docker/build-push-action", "url": "https://github.com/docker/build-push-action"}
+  ]},
+  {"day": 18, "module": "SQL drill 3", "objective": "Aggregation — GROUP BY / HAVING, cold, timed", "resources": [
+    {"label": "Analyze Data with SQL (Codecademy)", "url": "https://www.codecademy.com/learn/paths/analyze-data-with-sql"},
+    {"label": "SQLBolt aggregates", "url": "https://sqlbolt.com/lesson/select_queries_with_aggregates"},
+    {"label": "PGExercises aggregates", "url": "https://pgexercises.com/questions/aggregates/"}
+  ]},
+  {"day": 19, "module": "SQL drill 4", "objective": "Window functions, cold, timed", "resources": [
+    {"label": "Analyze Data with SQL (Codecademy)", "url": "https://www.codecademy.com/learn/paths/analyze-data-with-sql"},
+    {"label": "Mode window functions", "url": "https://mode.com/sql-tutorial/sql-window-functions"}
+  ]},
+  {"day": 20, "module": "SQL drill 5", "objective": "Indexing intuition — why a query is slow, not just what it returns", "resources": [
+    {"label": "Analyze Data with SQL (Codecademy)", "url": "https://www.codecademy.com/learn/paths/analyze-data-with-sql"},
+    {"label": "Use The Index, Luke", "url": "https://use-the-index-luke.com/"}
+  ]},
+  {"day": 21, "module": "SQL drill 6", "objective": "Milestone: timed mixed set against a mock incident/ticket dataset", "resources": [
+    {"label": "Analyze Data with SQL (Codecademy)", "url": "https://www.codecademy.com/learn/paths/analyze-data-with-sql"},
+    {"label": "PGExercises", "url": "https://pgexercises.com/"},
+    {"label": "SQLBolt", "url": "https://sqlbolt.com/"}
+  ]}
 ]

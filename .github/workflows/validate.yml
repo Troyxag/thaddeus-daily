@@ -1,0 +1,54 @@
+name: Validate
+
+on:
+  pull_request:
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: curriculum.json schema check
+        run: |
+          set -euo pipefail
+          jq -e 'type == "array" and length >= 21' curriculum.json > /dev/null
+          jq -e 'all(.[];
+                  (.day | type == "number") and
+                  (.module | type == "string" and length > 0) and
+                  (.objective | type == "string" and length > 0) and
+                  (.resources | type == "array" and length >= 1 and
+                    all(.[]; (.label | type == "string" and length > 0) and
+                             (.url | type == "string" and startswith("https://")))))' curriculum.json > /dev/null
+          jq -e '([.[].day] | unique | length) == length' curriculum.json > /dev/null
+          echo "curriculum.json OK"
+
+      - name: state/day.txt sanity check
+        run: |
+          set -euo pipefail
+          DAY=$(tr -d '[:space:]' < state/day.txt)
+          case "$DAY" in
+            ''|*[!0-9]*) echo "state/day.txt must contain a positive integer, got: '$DAY'" >&2; exit 1 ;;
+          esac
+          echo "day.txt OK (day $DAY)"
+
+      - name: workflow YAML parses
+        run: |
+          python3 - <<'EOF'
+          import yaml, glob
+          for f in sorted(glob.glob('.github/workflows/*.yml')):
+              yaml.safe_load(open(f))
+              print(f, 'OK')
+          EOF
+
+      - name: dry-run briefing build for every day (no Slack post)
+        run: |
+          set -euo pipefail
+          for D in $(jq -r '.[].day' curriculum.json) 22 30; do
+            bash scripts/build_briefing.sh "$D" | jq -e '.text | length > 0' > /dev/null
+            echo "Day $D briefing builds OK"
+          done
